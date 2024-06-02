@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package users.v1;
+
+import "errors/errors.proto";
+
+option go_package = "api/users/v1;v1";
+
+enum ErrorReason {
+  option (errors.default_code) = 500;
+
+  CONTENT_CONFLICT = 0 [(errors.code) = 409];
+  INVALID_ARGUMENT = 1 [(errors.code) = 400];
+}

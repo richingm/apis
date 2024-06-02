@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package api.users.v1;
+
+option go_package = "gm/api/users/v1;v1";
+option java_multiple_files = true;
+option java_package = "api.users.v1";
+
+service Users {
+	rpc CreateUsers (CreateUsersRequest) returns (CreateUsersReply);
+	rpc UpdateUsers (UpdateUsersRequest) returns (UpdateUsersReply);
+	rpc DeleteUsers (DeleteUsersRequest) returns (DeleteUsersReply);
+	rpc GetUsers (GetUsersRequest) returns (GetUsersReply);
+	rpc ListUsers (ListUsersRequest) returns (ListUsersReply);
+}
+
+message CreateUsersRequest {}
+message CreateUsersReply {}
+
+message UpdateUsersRequest {}
+message UpdateUsersReply {}
+
+message DeleteUsersRequest {}
+message DeleteUsersReply {}
+
+message GetUsersRequest {}
+message GetUsersReply {}
+
+message ListUsersRequest {}
+message ListUsersReply {}
